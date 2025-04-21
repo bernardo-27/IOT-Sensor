@@ -7,5 +7,5 @@ use App\Http\Controllers\SensorController;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
-Route::apiResource('sensor', SensorController::class);
+Route::apiResource('/sensor', SensorController::class);
 
