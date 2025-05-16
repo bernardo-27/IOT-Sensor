@@ -4,15 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Sensor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class SensorController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource via API
      */
     public function index()
     {
-        return Sensor::all();
+        return Sensor::latest()->take(100)->get();
+    }
+
+    /**
+     * Display the sensor dashboard view
+     */
+    public function dashboard()
+    {
+        return view('sensors.index');
     }
 
     /**
@@ -21,12 +30,20 @@ class SensorController extends Controller
     public function store(Request $request)
     {
         $fields = $request->validate([
-            'motion'=> 'required',
+            'temperature' => 'required|numeric',
+            'air_quality' => 'required|integer',
+            'light' => 'required|numeric',
+            'sound' => 'required|integer',
+            'system_on' => 'required|boolean',
+            'fault' => 'required|boolean',
         ]);
 
-        $sensor =Sensor::create($fields);
+        $sensor = Sensor::create($fields);
 
-        return $sensor;
+        return response()->json([
+            'message' => 'Sensor data received!',
+            'data' => $fields,
+        ]);
     }
 
     /**
@@ -35,7 +52,6 @@ class SensorController extends Controller
     public function show(Sensor $sensor)
     {
         return $sensor;
-        
     }
 
     /**
@@ -43,7 +59,18 @@ class SensorController extends Controller
      */
     public function update(Request $request, Sensor $sensor)
     {
-        //
+        $fields = $request->validate([
+            'temperature' => 'numeric',
+            'air_quality' => 'integer',
+            'light' => 'numeric',
+            'sound' => 'integer',
+            'system_on' => 'boolean',
+            'fault' => 'boolean',
+        ]);
+
+        $sensor->update($fields);
+
+        return $sensor;
     }
 
     /**
@@ -51,6 +78,8 @@ class SensorController extends Controller
      */
     public function destroy(Sensor $sensor)
     {
-        //
+        $sensor->delete();
+
+        return response()->json(null, 204);
     }
 }

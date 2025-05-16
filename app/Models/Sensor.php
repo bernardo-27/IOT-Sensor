@@ -10,7 +10,16 @@ class Sensor extends Model
     /** @use HasFactory<\Database\Factories\SensorFactory> */
     use HasFactory;
 
-    protected $fillable = [
-        'motion'
-    ];
+    //db table column
+protected $fillable = [
+    'temperature',
+    'air_quality',
+    'light',
+    'sound',
+    'system_on',
+    'fault',
+];
+
+
+
 }
