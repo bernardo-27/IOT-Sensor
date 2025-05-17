@@ -14,6 +14,7 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    
 
   <style>
     body {
@@ -315,5 +316,19 @@
     // Auto refresh data every 60 seconds
     setInterval(fetchSensorData, 60000);
   </script>
+
+
+<footer class="bg-white text-center py-4 mt-5 shadow-sm border-top" style="font-family: 'Poppins', sans-serif;">
+  <div class="container">
+    <h5 class="mb-3 text-primary fw-semibold">
+      Developed with care by:
+    </h5>
+    <p class="mb-1 text-secondary">Bernado F. Catriz Jr.</p>
+    <p class="mb-1 text-secondary">Nishren V. Hernandez</p>
+    <p class="mb-1 text-secondary">Princess Maylene Habon</p>
+    <p class="mb-1 text-secondary">Revin King M. Lorena</p>
+    <p class="mb-0 fw-semibold text-dark">BSIT 3A</p>
+  </div>
+</footer>
 </body>
 </html>
