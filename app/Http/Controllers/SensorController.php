@@ -13,7 +13,7 @@ class SensorController extends Controller
      */
     public function index()
     {
-        return Sensor::latest()->take(100)->get();
+  return Sensor::orderBy('created_at','desc')->paginate(50);
     }
 
     /**
