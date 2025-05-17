@@ -9,4 +9,5 @@ use App\Http\Controllers\SensorController;
 
 Route::apiResource('/sensor', SensorController::class);
 
+
 // Route::post('/sensor', [SensorController::class, 'store']);

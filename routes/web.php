@@ -8,4 +8,7 @@ use App\Http\Controllers\SensorController;
 //     return view('welcome');
 // });
 
-Route::get('/sensors', [SensorController::class, 'index'])->name('sensors.index');
+Route::get('/', function () {
+    $sensors = Sensor::all();
+    return view('index', compact('sensors'));
+});
