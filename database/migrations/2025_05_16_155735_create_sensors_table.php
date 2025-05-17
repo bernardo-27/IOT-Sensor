@@ -9,8 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
+    if (!Schema::hasTable('sensors')) {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
             $table->float('temperature')->nullable();
