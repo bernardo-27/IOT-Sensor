@@ -21,7 +21,7 @@ class SensorController extends Controller
      */
     public function dashboard()
     {
-        return view('index');
+        return view('home');
     }
 
     /**
