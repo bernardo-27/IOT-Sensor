@@ -64,7 +64,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; {{ date('Y') }} Pechay Monitoring Project. All rights reserved.</p>
+    <p>&copy; {{ date('Y') }} Plant Monitoring Project. All rights reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
