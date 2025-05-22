@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('title', 'Home - Pechay Monitoring')
+@section('title', 'Home - Plant Monitoring')
 
 @section('content')
 <div class="container py-5">
   <div class="text-center mb-5">
-    <h1 class="display-5 fw-bold mb-3">🌱 Hydroponic Pechay Monitoring Using IoT</h1>
+    <h1 class="display-5 fw-bold mb-3">🌱 Hydroponic Plant Monitoring Using IoT</h1>
     <p class="lead text-secondary">
       A smart monitoring system for hydroponically grown pechay, powered by IoT and environmental sensors. Track noise, temperature, humidity, light, and air quality in real time to support efficient and data-driven plant care.
     </p>
@@ -16,11 +16,11 @@
   <div class="mb-5 text-center">
 <div>
   <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-    <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fyoutu.be%2FObF8xK3DYiM%3Fsi%3DA3xDcj1bKG5D64Bq&key=925108d922be940af814f71907a7df4b" 
-    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" 
+    <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fyoutu.be%2FObF8xK3DYiM%3Fsi%3DA3xDcj1bKG5D64Bq&key=925108d922be940af814f71907a7df4b"
+    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"
     allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe>
   </div>
-    <a href="https://embedcodesgenerator.com/tools/youtube-embed-code?gad_source=1&gad_campaignid=22458335448&gbraid=0AAAAA_LxlSgxvMwUjigse8MwarJSWXtmK&gclid=Cj0KCQjwlrvBBhDnARIsAHEQgOTBeodxhfUAogmBa8l-Re-eGPm0pjXe6_2XDuw5YcdC_OgmzwTyaskaAgPWEALw_wcB" 
+    <a href="https://embedcodesgenerator.com/tools/youtube-embed-code?gad_source=1&gad_campaignid=22458335448&gbraid=0AAAAA_LxlSgxvMwUjigse8MwarJSWXtmK&gclid=Cj0KCQjwlrvBBhDnARIsAHEQgOTBeodxhfUAogmBa8l-Re-eGPm0pjXe6_2XDuw5YcdC_OgmzwTyaskaAgPWEALw_wcB"
     rel="noopener" target="_blank" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">youtube embed code</a></div>
   <p class="text-muted">
     A walkthrough of the final hydroponic setup — showcasing components and how sensor data is transmitted from the ESP32 to the backend via a custom API.
